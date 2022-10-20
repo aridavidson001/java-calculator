@@ -2,25 +2,32 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    Scanner userInputScannerObj =
-        new Scanner(System.in); // Create a Scanner object
+    // setup - decleration of variables, importing other classes, etc.
+    // declares variables for user input
+    double userInputFirstNumber;
+    String userInputFunction;
+    double userInputSecondNumber;
+    // creates a scanner function
+    Scanner userInputScannerObj = new Scanner(System.in);
+    // imports other classes
+    Maths maths = new Maths();
+    CheckOperator checkOperator = new CheckOperator();
 
+    // takes input from user
     System.out.println("Input First Number");
-    double userInputFirstNumber = userInputScannerObj.nextDouble();
-
+    userInputFirstNumber = userInputScannerObj.nextDouble();
     System.out.println("Add(+), Subtract(-), Divide(/), or Multiply(x)?");
-    String userInputFunction = userInputScannerObj.nextLine();
-    if (userInputFunction == "+" || userInputFunction == "-"
-        || userInputFunction == "x" || userInputFunction == "/") {
-    } else {
+    userInputFunction = userInputScannerObj.nextLine();
+    // loops the error untill a satisfactory character is input
+    while (checkOperator.checkOperator(userInputFunction) == false) {
       System.out.println("Error, please input +, -, /, or x");
-      System.out.println("Add(+), Subtract(-), Divide(/), or Multiply(x)?");
       userInputFunction = userInputScannerObj.nextLine();
     }
-    System.out.println("Input Second Number");
-    double userInputSecondNumber = userInputScannerObj.nextDouble();
-    Maths maths = new Maths();
 
+    System.out.println("Input Second Number");
+    userInputSecondNumber = userInputScannerObj.nextDouble();
+
+    // calls the correct function based on the userInputFunction
     switch (userInputFunction) {
       case "+":
         System.out.println(userInputFirstNumber + " " + userInputFunction + " "
