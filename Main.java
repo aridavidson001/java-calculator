@@ -23,25 +23,25 @@ public class Main {
 
     switch (userInputFunction) {
       case "+":
-        System.out.println(userInputFirstNumber + userInputFunction
+        System.out.println(userInputFirstNumber + " " + userInputFunction + " "
             + userInputSecondNumber + " = "
             + maths.addition(userInputFirstNumber, userInputSecondNumber));
         break;
       case "-":
-        System.out.println(userInputFirstNumber + userInputFunction
+        System.out.println(userInputFirstNumber + " " + userInputFunction + " "
             + userInputSecondNumber + " = "
             + maths.subtraction(userInputFirstNumber, userInputSecondNumber));
 
         break;
       case "x":
-        System.out.println(userInputFirstNumber + userInputFunction
+        System.out.println(userInputFirstNumber + " " + userInputFunction + " "
             + userInputSecondNumber + " = "
             + maths.multiplication(
                 userInputFirstNumber, userInputSecondNumber));
 
         break;
       case "/":
-        System.out.println(userInputFirstNumber + userInputFunction
+        System.out.println(userInputFirstNumber + " " + userInputFunction + " "
             + userInputSecondNumber + " = "
             + maths.division(userInputFirstNumber, userInputSecondNumber));
 
