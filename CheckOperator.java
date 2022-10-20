@@ -3,9 +3,9 @@ import java.util.Scanner;
 class CheckOperator {
   public static void main(String[] args) {}
   public static boolean checkOperator(String userInputFunction) {
-    Scanner userInputScannerObj =
-        new Scanner(System.in); // Create a Scanner object
-
+    // Create a Scanner object
+    Scanner userInputScannerObj = new Scanner(System.in);
+    // cycle through possible operators
     switch (userInputFunction) {
       case "+":
         return true;
