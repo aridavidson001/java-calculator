@@ -10,7 +10,7 @@ public class Main {
     // creates a scanner function
     Scanner userInputScannerObj = new Scanner(System.in);
     // imports other classes
-    Maths maths = new Maths();
+    CallMaths callMaths = new CallMaths();
     CheckOperator checkOperator = new CheckOperator();
 
     // takes input from user
@@ -35,36 +35,6 @@ public class Main {
       System.out.println();
     }
     // calls the correct function based on the userInputFunction
-    switch (userInputFunction) {
-      case "+":
-        System.out.println(userInputFirstNumber + " " + userInputFunction + " "
-            + userInputSecondNumber + " = "
-            + maths.addition(userInputFirstNumber, userInputSecondNumber));
-        break;
-      case "-":
-        System.out.println(userInputFirstNumber + " " + userInputFunction + " "
-            + userInputSecondNumber + " = "
-            + maths.subtraction(userInputFirstNumber, userInputSecondNumber));
-
-        break;
-      case "x":
-        System.out.println(userInputFirstNumber + " " + userInputFunction + " "
-            + userInputSecondNumber + " = "
-            + maths.multiplication(
-                userInputFirstNumber, userInputSecondNumber));
-
-        break;
-      case "/":
-        System.out.println(userInputFirstNumber + " " + userInputFunction + " "
-            + userInputSecondNumber + " = "
-            + maths.division(userInputFirstNumber, userInputSecondNumber));
-
-        break;
-      case "%":
-        System.out.println(userInputFirstNumber + " " + userInputFunction + " "
-            + userInputSecondNumber + " = "
-            + maths.mod(userInputFirstNumber, userInputSecondNumber));
-        break;
-    }
+    callMaths.callMaths(userInputFirstNumber, userInputFunction, userInputSecondNumber);
   }
 }
