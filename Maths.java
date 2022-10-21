@@ -24,7 +24,7 @@ class Maths {
       double userInputFirstNumber, double userInputSecondNumber) {
     return userInputFirstNumber / userInputSecondNumber;
   }
-    // returns result of inputs
+  // returns result of inputs
   public static double mod(
       double userInputFirstNumber, double userInputSecondNumber) {
     return userInputFirstNumber % userInputSecondNumber;
