@@ -1,10 +1,10 @@
-public class CallMaths{
+public class CallMaths {
   public static void main(String[] args) {}
-public static void callMaths(double userInputFirstNumber, String userInputFunction, double userInputSecondNumber){
-     //imports the math class
-     Maths maths = new Maths();
-   
-     switch (userInputFunction) {
+  public static void callMaths(double userInputFirstNumber,
+      String userInputFunction, double userInputSecondNumber) {
+    Maths maths = new Maths();
+
+    switch (userInputFunction) {
       case "+":
         System.out.println(userInputFirstNumber + " " + userInputFunction + " "
             + userInputSecondNumber + " = "
