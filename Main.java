@@ -21,12 +21,7 @@ public class Main {
     userInputFunction = userInputScannerObj.nextLine();
     userInputFunction = userInputScannerObj.nextLine();
     // loops the error untill a satisfactory character is input
-    if (checkOperator.checkOperator(userInputFunction) == false) {
-      while (checkOperator.checkOperator(userInputFunction) == false) {
-        System.out.println("Error, please input +, -, /, or x");
-        userInputFunction = userInputScannerObj.nextLine();
-      }
-    }
+    checkOperator.checkOperatorFunc(userInputFunction);
 
     System.out.println("Input Second Number");
     userInputSecondNumber = userInputScannerObj.nextDouble();
@@ -35,6 +30,7 @@ public class Main {
       System.out.println();
     }
     // calls the correct function based on the userInputFunction
-    callMaths.callMaths(userInputFirstNumber, userInputFunction, userInputSecondNumber);
+    callMaths.callMaths(
+        userInputFirstNumber, userInputFunction, userInputSecondNumber);
   }
 }
