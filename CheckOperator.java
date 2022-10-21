@@ -15,6 +15,8 @@ class CheckOperator {
         return true;
       case "x":
         return true;
+      case "%":
+        return true;
       default:
         return false;
     }
